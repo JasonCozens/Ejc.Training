@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureAnalysis", "StructureAnalysis\StructureAnalysis.csproj", "{71714C67-678A-445A-A847-53205DFDF586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureAnalysisTests", "StructureAnalysisTests\StructureAnalysisTests.csproj", "{6F61FA67-0D83-41A0-A9AC-8AC3620372B0}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71714C67-678A-445A-A847-53205DFDF586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71714C67-678A-445A-A847-53205DFDF586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71714C67-678A-445A-A847-53205DFDF586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71714C67-678A-445A-A847-53205DFDF586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F61FA67-0D83-41A0-A9AC-8AC3620372B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F61FA67-0D83-41A0-A9AC-8AC3620372B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F61FA67-0D83-41A0-A9AC-8AC3620372B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F61FA67-0D83-41A0-A9AC-8AC3620372B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
