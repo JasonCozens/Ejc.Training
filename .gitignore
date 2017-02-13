@@ -1,3 +1,5 @@
 Src/packages/
 bin/
 obj/
+Src/StructureAnalysis/.AssemblyAttributes
+Src/StructureAnalysisTests/.AssemblyAttributes
