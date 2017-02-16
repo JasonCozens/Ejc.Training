@@ -2,6 +2,16 @@
 {
     public class PatternChecker
     {
-        public bool IsValidPattern => true;
+        public PatternChecker()
+        {
+            IsValidPattern = true;
+        }
+
+        public bool IsValidPattern { get; private set; }
+
+        public void CheckPattern(string pattern)
+        {
+            IsValidPattern = false;
+        }
     }
 }
