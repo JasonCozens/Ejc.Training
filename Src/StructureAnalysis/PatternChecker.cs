@@ -14,18 +14,8 @@
             var openBracketCount = 0;
             foreach (var c in pattern)
             {
-                if (c == '(')
-                {
-                    openBracketCount += 1;
-                }
-                else
-                {
-                    openBracketCount -= 1;
-                }
-                if (openBracketCount < 0)
-                {
-                    break;
-                }
+                openBracketCount = c == '(' ? openBracketCount + 1 : openBracketCount - 1;
+                if (openBracketCount < 0) break;
             }
             IsValidPattern = openBracketCount == 0;
         }
