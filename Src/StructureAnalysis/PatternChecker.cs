@@ -11,7 +11,10 @@
 
         public void CheckPattern(string pattern)
         {
-            IsValidPattern = false;
+            if (pattern.Length < 2)
+            {
+                IsValidPattern = false;
+            }
         }
     }
 }
