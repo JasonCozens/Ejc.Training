@@ -3,6 +3,10 @@ using Xunit;
 
 namespace StructureAnalysisTests
 {
+    /// <summary>
+    /// We know that as we work through a pattern "(".Count >= ")".Count
+    /// At the end "(".Count = 0 if the string match.
+    /// </summary>
     public class PatternCheckerTests
     {
         [Fact]
@@ -18,6 +22,8 @@ namespace StructureAnalysisTests
         [InlineData("))")]
         [InlineData(")(")]
         [InlineData("((")]
+        [InlineData("()(")]
+        [InlineData("()((")]
         public void IsValidPattern_IsFalse(string pattern)
         {
             var patternChecker = new PatternChecker();
@@ -29,6 +35,8 @@ namespace StructureAnalysisTests
 
         [Theory]
         [InlineData("()")]
+        [InlineData("()()")]
+        [InlineData("(())")]
         public void IsValidPattern_IsTrue(string pattern)
         {
             var patternChecker = new PatternChecker();

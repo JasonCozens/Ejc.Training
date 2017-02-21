@@ -11,10 +11,23 @@
 
         public void CheckPattern(string pattern)
         {
-            if (pattern != "()")
+            var openBracketCount = 0;
+            foreach (var c in pattern)
             {
-                IsValidPattern = false;
+                if (c == '(')
+                {
+                    openBracketCount += 1;
+                }
+                else
+                {
+                    openBracketCount -= 1;
+                }
+                if (openBracketCount < 0)
+                {
+                    break;
+                }
             }
+            IsValidPattern = openBracketCount == 0;
         }
     }
 }
