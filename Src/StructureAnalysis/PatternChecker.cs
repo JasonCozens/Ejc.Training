@@ -11,7 +11,7 @@
 
         public void CheckPattern(string pattern)
         {
-            if (pattern.Length < 2)
+            if (pattern != "()")
             {
                 IsValidPattern = false;
             }

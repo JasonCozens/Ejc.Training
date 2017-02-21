@@ -15,6 +15,9 @@ namespace StructureAnalysisTests
 
         [Theory]
         [InlineData(")")]
+        [InlineData("))")]
+        [InlineData(")(")]
+        [InlineData("((")]
         public void IsValidPattern_IsFalse(string pattern)
         {
             var patternChecker = new PatternChecker();
