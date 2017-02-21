@@ -13,22 +13,24 @@ namespace StructureAnalysisTests
             Assert.Equal(true, patternChecker.IsValidPattern);
         }
 
-        [Fact]
-        public void SingleCharacter_IsValidPattern_IsFalse()
+        [Theory]
+        [InlineData(")")]
+        public void IsValidPattern_IsFalse(string pattern)
         {
             var patternChecker = new PatternChecker();
 
-            patternChecker.CheckPattern(")");
+            patternChecker.CheckPattern(pattern);
 
             Assert.Equal(false, patternChecker.IsValidPattern);
         }
 
-        [Fact]
-        public void OpenCloseBrackets_IsValidPattern_IsFalse()
+        [Theory]
+        [InlineData("()")]
+        public void IsValidPattern_IsTrue(string pattern)
         {
             var patternChecker = new PatternChecker();
 
-            patternChecker.CheckPattern("()");
+            patternChecker.CheckPattern(pattern);
 
             Assert.Equal(true, patternChecker.IsValidPattern);
         }
