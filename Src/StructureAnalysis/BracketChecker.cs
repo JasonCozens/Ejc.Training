@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace StructureAnalysis
 {
@@ -10,5 +11,10 @@ namespace StructureAnalysis
         }
 
         public bool IsValidPattern { get; set; }
+
+        public void CheckPattern(string pattern)
+        {
+            IsValidPattern = false;
+        }
     }
 }

@@ -12,5 +12,23 @@ namespace StructureAnalysisTests
 
             Assert.Equal(true, bracketChecker.IsValidPattern);
         }
+
+        [Theory]
+        [InlineData("(")]
+        [InlineData(")")]
+        [InlineData("[")]
+        [InlineData("]")]
+        [InlineData("{")]
+        [InlineData("}")]
+        [InlineData("<")]
+        [InlineData(">")]
+        public void IsValidPattern_IsFalse(string pattern)
+        {
+            var bracketChecker = new BracketChecker();
+
+            bracketChecker.CheckPattern(pattern);
+
+            Assert.Equal(false, bracketChecker.IsValidPattern);
+        }
     }
 }
