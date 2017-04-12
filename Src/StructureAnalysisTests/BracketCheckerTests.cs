@@ -3,6 +3,10 @@ using Xunit;
 
 namespace StructureAnalysisTests
 {
+    /// <summary>
+    /// It is difficult to write a TDD version of the BracketChecker.
+    /// A new approach is required.
+    /// </summary>
     public class BracketCheckerTests
     {
         [Fact]
