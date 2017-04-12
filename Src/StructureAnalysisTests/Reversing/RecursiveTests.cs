@@ -17,5 +17,13 @@ namespace StructureAnalysisTests.Reversing
 
             Assert.Equal(new List<int>(), outputList);
         }
+
+        [Fact]
+        public void SingleElementList_SingleElementList()
+        {
+            var outputList = Recursive<int>.Reverse(new List<int> { 3 });
+
+            Assert.Equal(new List<int> { 3 }, outputList);
+        }
     }
 }
