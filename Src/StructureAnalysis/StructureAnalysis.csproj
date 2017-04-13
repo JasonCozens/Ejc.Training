@@ -46,6 +46,7 @@
     <Compile Include="BracketChecker.cs" />
     <Compile Include="PatternChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reversing\Iterative.cs" />
     <Compile Include="Reversing\Recursive.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
