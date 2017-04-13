@@ -7,7 +7,17 @@ namespace StructureAnalysis.Reversing
     {
         public static object Reverse(List<T> list)
         {
-            return list;
+            var stack = new Stack<T>();
+            var output = new List<T>();
+            foreach (var t in list)
+            {
+                stack.Push(t);
+            }
+            while (stack.Count > 0)
+            {
+                output.Add(stack.Pop());
+            }
+            return output;
         }
     }
 }

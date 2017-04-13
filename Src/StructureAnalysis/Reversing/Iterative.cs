@@ -8,7 +8,7 @@ namespace StructureAnalysis.Reversing
         public static object Reverse(List<T> list)
         {
             var output = new List<T>();
-            foreach (T t in list)
+            foreach (var t in list)
             {
                 output.Insert(0, t);
             }
