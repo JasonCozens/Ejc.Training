@@ -7,7 +7,7 @@ namespace StructureAnalysis.Reversing
     {
         public static object Reverse(List<T> list)
         {
-            return new List<T>();
+            return list;
         }
     }
 }
