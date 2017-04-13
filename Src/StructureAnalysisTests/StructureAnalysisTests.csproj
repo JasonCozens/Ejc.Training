@@ -63,6 +63,7 @@
     <Compile Include="PatternCheckerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reversing\IterativeTests.cs" />
+    <Compile Include="Reversing\PushPopTests.cs" />
     <Compile Include="Reversing\RecursiveTests.cs" />
   </ItemGroup>
   <ItemGroup>
