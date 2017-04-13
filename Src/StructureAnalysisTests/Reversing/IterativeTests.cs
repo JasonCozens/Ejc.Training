@@ -21,5 +21,13 @@ namespace StructureAnalysisTests.Reversing
 
             Assert.Equal(new List<int> { 3 }, outputList);
         }
+
+        [Fact]
+        public void TwoElementList_ReverseTwoElementList()
+        {
+            var outputList = Iterative<int>.Reverse(new List<int> { 3, 5 });
+
+            Assert.Equal(new List<int> { 5, 3 }, outputList);
+        }
     }
 }
