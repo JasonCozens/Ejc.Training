@@ -13,9 +13,11 @@ Clear-Host
 
 $Command = "Get-Help .\$ScriptName"
 
-Write-Host Example 1 - Ask for help. -> $Command
+Write-Host -ForegroundColor Yellow Example 1 - Ask for help. -> $Command
 
 Invoke-Expression $Command
+
+Write-Host -ForegroundColor Yellow End of Example 1 - Press ENTER to continue ...
 
 Read-Host
 
@@ -23,7 +25,7 @@ Clear-Host
 
 $Command_2 = "Get-Help -Full .\$ScriptName"
 
-Write-Host Example 2 - Ask for more help. -> $Command_2
+Write-Host -ForegroundColor Yellow Example 2 - Ask for more help. -> $Command_2
 
 Invoke-Expression $($Command_2)
 
