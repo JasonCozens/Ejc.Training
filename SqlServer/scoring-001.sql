@@ -1,9 +1,9 @@
-DECLARE @Answer1a INT = 1000
-DECLARE @Answer1b INT = 2000
-DECLARE @Answer2 INT = 2000
-DECLARE @Answer3 INT = 2000
-DECLARE @Answer4 INT = 2000
-DECLARE @Answer5 INT = 2000
+DECLARE @Guess1a INT = 1000
+DECLARE @Guess1b INT = 2000
+DECLARE @Guess2 INT = 2000
+DECLARE @Guess3 INT = 2000
+DECLARE @Guess4 INT = 2000
+DECLARE @Guess5 INT = 2000
 
 DECLARE @Actual1a INT = 951
 DECLARE @Actual1b INT = 2187
@@ -35,44 +35,44 @@ CREATE TABLE #Scores
 	Score INT
 )
 
-IF ABS(@Actual1a - @Answer1a) < @Range1a
+IF ABS(@Actual1a - @Guess1a) < @Range1a
 	INSERT INTO #Scores 
-	SELECT 'Question 1a' AS Question, ((@Range1a - ABS(@Actual1a - @Answer1a)) * @MaxScore1a) / @Range1a AS Score
+	SELECT 'Question 1a' AS Question, ((@Range1a - ABS(@Actual1a - @Guess1a)) * @MaxScore1a) / @Range1a AS Score
 ELSE
 	INSERT INTO #Scores 
 	SELECT 'Question 1a' AS Question, 0 AS Score 
 
-IF ABS(@Actual1b - @Answer1b) < @Range1b
+IF ABS(@Actual1b - @Guess1b) < @Range1b
 	INSERT INTO #Scores 
-	SELECT 'Question 1b' AS Question, ((@Range1b - ABS(@Actual1b - @Answer1b)) * @MaxScore1b) / @Range1b AS Score
+	SELECT 'Question 1b' AS Question, ((@Range1b - ABS(@Actual1b - @Guess1b)) * @MaxScore1b) / @Range1b AS Score
 ELSE
 	INSERT INTO #Scores 
 	SELECT 'Question 1b' AS Question, 0 AS Score
 
-IF ABS(@Actual2 - @Answer2) < @Range2
+IF ABS(@Actual2 - @Guess2) < @Range2
 	INSERT INTO #Scores 
-	SELECT 'Question 2' AS Question, ((@Range2 - ABS(@Actual2 - @Answer2)) * @MaxScore2) / @Range2 AS Score
+	SELECT 'Question 2' AS Question, ((@Range2 - ABS(@Actual2 - @Guess2)) * @MaxScore2) / @Range2 AS Score
 ELSE
 	INSERT INTO #Scores 
 	SELECT 'Question 2' AS Question, 0 AS Score
 
-IF ABS(@Actual3 - @Answer3) < @Range3
+IF ABS(@Actual3 - @Guess3) < @Range3
 	INSERT INTO #Scores 
-	SELECT 'Question 3' AS Question, ((@Range3 - ABS(@Actual3 - @Answer3)) * @MaxScore3) / @Range3 AS Score
+	SELECT 'Question 3' AS Question, ((@Range3 - ABS(@Actual3 - @Guess3)) * @MaxScore3) / @Range3 AS Score
 ELSE
 	INSERT INTO #Scores 
 	SELECT 'Question 3' AS Question, 0 AS Score
 
-IF ABS(@Actual4 - @Answer4) < @Range4
+IF ABS(@Actual4 - @Guess4) < @Range4
 	INSERT INTO #Scores 
-	SELECT 'Question 4' AS Question, ((@Range4 - ABS(@Actual4 - @Answer4)) * @MaxScore4) / @Range4 AS Score
+	SELECT 'Question 4' AS Question, ((@Range4 - ABS(@Actual4 - @Guess4)) * @MaxScore4) / @Range4 AS Score
 ELSE
 	INSERT INTO #Scores 
 	SELECT 'Question 4' AS Question, 0 AS Score
 
-IF ABS(@Actual5 - @Answer5) < @Range5
+IF ABS(@Actual5 - @Guess5) < @Range5
 	INSERT INTO #Scores 
-	SELECT 'Question 5' AS Question, ((@Range5 - ABS(@Actual5 - @Answer5)) * @MaxScore5) / @Range5 AS Score
+	SELECT 'Question 5' AS Question, ((@Range5 - ABS(@Actual5 - @Guess5)) * @MaxScore5) / @Range5 AS Score
 ELSE
 	INSERT INTO #Scores 
 	SELECT 'Question 5' AS Question, 0 AS Score
