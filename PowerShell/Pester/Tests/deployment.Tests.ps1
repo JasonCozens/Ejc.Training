@@ -1,4 +1,6 @@
-﻿$scriptLocation = Split-Path -Parent $MyInvocation.MyCommand.Source | Split-Path -Parent
+﻿(Get-Item $(Split-Path $MyInvocation.MyCommand.Source -Parent)).Parent.FullName
+Write-Host "----"
+$scriptLocation = Split-Path -Parent $MyInvocation.MyCommand.Source | Split-Path -Parent
 $systemUnderTest = (Split-Path -Leaf $MyInvocation.MyCommand.Source) -replace '\.Tests\.', '.'
 "$scriptLocation\$systemUnderTest"
 . "$scriptLocation\$systemUnderTest"
